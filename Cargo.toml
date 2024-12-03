@@ -1,0 +1,16 @@
+[package]
+name = "escrow-native-program"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+no-entrypoint=[]
+
+[dependencies]
+arrayref = "0.3.9"
+solana-program = "1.17.3"
+spl-token = { version = "4.0.0", features = ["no-entrypoint"] }
+thiserror = "2.0.3"
+
+[lib]
+crate-type = ["cdylib", "lib"]
